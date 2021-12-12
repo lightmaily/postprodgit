@@ -113,8 +113,8 @@ html {
     animation: arrow-down 1.5s infinite;
     position: absolute;
     top: 49%;
-    left: 47%;
-    margin-top: 450px;
+    left: 49%;
+    margin-top: 430px;
 }
 .arrow-down span:nth-child(2){
     animation-delay: -0.2s;
@@ -155,7 +155,7 @@ html {
     font-family: 'Open Sans';
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 49.9%;
     transform:translate(-50%, -50%);
     animation: card-parag 1.5s infinite;
     margin-top: 449px;

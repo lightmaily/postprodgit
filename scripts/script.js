@@ -68,13 +68,3 @@ let elements = document.querySelectorAll('.cards');
 for (let elm of elements) {
   observer.observe(elm);
 }
-
-$('a[href^="#"').on('click', function() {
-
-  let href = $(this).attr('href');
-
-  $('html, body').animate({
-      scrollTop: $(href).offset().top
-  });
-  return false;
-});
