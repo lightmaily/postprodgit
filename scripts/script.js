@@ -6,9 +6,8 @@ var TxtRotate = function(el, toRotate, period) {
     this.txt = '';
     this.tick();
     this.isDeleting = false;
-  };
-  
-  TxtRotate.prototype.tick = function() {
+};
+TxtRotate.prototype.tick = function() {
     var i = this.loopNum % this.toRotate.length;
     var fullTxt = this.toRotate[i];
   
@@ -37,9 +36,8 @@ var TxtRotate = function(el, toRotate, period) {
     setTimeout(function() {
       that.tick();
     }, delta);
-  };
-  
-  window.onload = function() {
+};
+window.onload = function() {
     var elements = document.getElementsByClassName('txt-rotate');
     for (var i=0; i<elements.length; i++) {
       var toRotate = elements[i].getAttribute('data-rotate');
@@ -52,19 +50,57 @@ var TxtRotate = function(el, toRotate, period) {
     css.type = "text/css";
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #fff }";
     document.body.appendChild(css);
-  };
-
+};
 
 // function onEntry(entry) {
 //   entry.forEach(change => {
 //     if (change.isIntersecting) {
-//       change.target.classList.add('cards-show');
+//       change.target.classList.add('element-show');
 //     }
 //   });
 // }
-// let options = { threshold: [0.5] };
+// let options = {
+//   threshold: [0.5] };
 // let observer = new IntersectionObserver(onEntry, options);
-// let elements = document.querySelectorAll('.cards');
+// let elements = document.querySelectorAll('.element-animation');
 // for (let elm of elements) {
 //   observer.observe(elm);
 // }
+
+var block_show = false;
+function scrollTracking(){
+	if (block_show) {
+		return false;
+	}
+ 
+	var wt = $(window).scrollTop();
+	var wh = $(window).height();
+	var et = $('.cards').offset().top;
+	var eh = $('.cards').outerHeight();
+	var dh = $(document).height();   
+ 
+	if (wt + wh >= et || wh + wt == dh || eh + et < wh){
+		block_show = true;
+		
+		// Код анимации
+		$('.active div:eq(0)').show('fast', function(){
+			$(this).next().show('fast', arguments.callee);
+		});
+	}
+}
+
+// Плавный скролл
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};
+
+// Плавная анимация

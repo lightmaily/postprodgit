@@ -69,10 +69,8 @@ html {
     align-items: center;
     opacity: 1;
     position: relative;
-}
-.cards.cards-show{
-    opacity: 1;
-    transition: 1s;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 .card-item{
     padding: 100px;
