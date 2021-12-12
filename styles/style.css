@@ -113,7 +113,7 @@ html {
     animation: arrow-down 1.5s infinite;
     position: absolute;
     top: 49%;
-    left: 47%%;
+    left: 47%;
     margin-top: 450px;
 }
 .arrow-down span:nth-child(2){
