@@ -131,7 +131,7 @@ html {
     font-size: 50px;
 }
 .camera-icon{
-    margin-left: 23px;
+    margin-left: 10px;
     margin-bottom: 20px;
     font-size: 50px;
 }
@@ -141,7 +141,6 @@ html {
     font-size: 50px;
 }
 .cook-icon{
-    margin-left: 23px;
     margin-bottom: 20px;
     font-size: 50px;
 }
@@ -156,10 +155,10 @@ html {
     font-family: 'Open Sans';
     position: absolute;
     top: 50%;
-    left: 50.5%;
+    left: 50%;
     transform:translate(-50%, -50%);
     animation: card-parag 1.5s infinite;
-    margin-top: 450px;
+    margin-top: 449px;
 }
 .footer{
     background: linear-gradient(353deg, rgba(204,210,215,1) 0%, rgba(255,255,255,1) 100%);
