@@ -39,6 +39,11 @@ html {
     justify-content: center;
     transition: 0.5s;
 }
+.nav__parag span{
+    margin-left: 7px;
+    font-family: 'Open Sans';
+    letter-spacing: 1px;
+}
 .nav__parag:hover{
     transition: 0.5s;
     color: rgb(255, 198, 145);
@@ -67,10 +72,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 1;
     position: relative;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
 }
 .card-item{
     padding: 100px;
@@ -107,18 +109,11 @@ html {
     height: 30px;
     border-bottom: 2px solid #000;
     border-right: 2px solid #000;
-    transform: rotate(45deg), translate(-50%, -50%);
     animation: arrow-down 1.5s infinite;
     position: absolute;
     top: 49%;
-    left: 49%;
+    left: 48.9%;
     margin-top: 430px;
-}
-.arrow-down span:nth-child(2){
-    animation-delay: -0.2s;
-}
-.arrow-down span:nth-child(3){
-    animation-delay: -0.4s;
 }
 .s{
     position: relative;
@@ -177,7 +172,11 @@ html {
 }
 .footer__title{
     font-size: 18px;
+    font-family: 'Poppins';
+}
+.footer__title span{
     font-family: 'Open Sans';
+    margin-left: 1px;
 }
 .icons{
     color: #808080;
@@ -260,6 +259,6 @@ html {
 }
 @media(max-width: 552px){
     .arrow-down span{
-        left: 47.5%;
+        left: 46.8%;
     }
 }
