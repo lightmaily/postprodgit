@@ -96,6 +96,9 @@ html {
     z-index: 1;
     padding-top: 10px;
 }
+.card-descr span{
+    font-size: 18px;
+}
 .arrow-down {
     position: relative;
     cursor: pointer;
@@ -177,10 +180,10 @@ html {
 }
 .icons{
     color: #808080;
-    transition: 2s;
+    transition: 0.5s;
 }
 .icons:hover{
-    color: #a1a1a1;
+    color: rgb(255, 198, 145);
 }
 
 
